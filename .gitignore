@@ -4,3 +4,8 @@
 #*
 *.log
 *.pyc
+.venv/
+__pycache__/
+.pytest_cache/
+data/*
+!data/.gitkeep
