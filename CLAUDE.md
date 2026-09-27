@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-## Current state
+## Project
 
-Skeleton Python agent project managed with **uv**, targeting Python 3.11, using a src layout (package `app`). Runtime dependencies are LangGraph, Pydantic v2, and Streamlit. No LLM provider is chosen yet.
+@docs/project.md
 
-It lives under `~/projects`, so the workspace-level `~/projects/CLAUDE.md` applies.
+This repo lives under `~/projects`, so the workspace-level `~/projects/CLAUDE.md` applies.
 
 ## Conventions
 - Stack: Python 3.11, uv, LangGraph, Pydantic v2, pytest, Streamlit.
@@ -35,5 +35,5 @@ It lives under `~/projects`, so the workspace-level `~/projects/CLAUDE.md` appli
 
 - `src/app/`: `schemas.py` (contracts), `agents/`, `tools/`, `prompts/`, `workflows/` (LangGraph orchestration), `memory/`, `llm/` (model clients), and `config.py` (settings read from env vars).
 - `tests/unit/` and `tests/integration/`, with shared fixtures in `tests/conftest.py`.
-- `evals/`, `scripts/`, `notebooks/`, and `docs/` are empty placeholders. `data/` is gitignored except for `.gitkeep`.
+- `docs/project.md` is the project description (imported above); swap it out per project. `evals/`, `scripts/`, and `notebooks/` are empty placeholders. `data/` is gitignored except for `.gitkeep`.
 - Copy `.env.example` to `.env` for local settings. `.env` is gitignored.
