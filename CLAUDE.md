@@ -20,6 +20,8 @@ It lives under `~/projects`, so the workspace-level `~/projects/CLAUDE.md` appli
 - Keep prompts in `prompts/` and tools in `tools/` rather than inline in agent modules, so agents stay thin wiring.
 - The build backend is `uv_build`, which is pointed at the package by `[tool.uv.build-backend] module-name = "app"` in `pyproject.toml`. Don't rename or move `src/app/` without updating it.
 - Tests that call a real LLM or network go in `tests/integration/`. Keep `tests/unit/` offline and fast.
+- Always confirm the branch name when committing to git or pushing to a remote repo.
+- Integrate branches by rebasing, never by merge commits: `git rebase main` on the feature branch, then `git switch main && git merge --ff-only <branch>`. Use `git pull --rebase` when updating from the remote. Don't rebase commits that are already pushed to a shared branch without asking.
 
 ## Commands
 
